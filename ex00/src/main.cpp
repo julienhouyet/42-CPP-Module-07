@@ -6,7 +6,7 @@
 /*   By: jhouyet <jhouyet@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/30 13:43:00 by jhouyet           #+#    #+#             */
-/*   Updated: 2024/07/08 09:59:33 by jhouyet          ###   ########.fr       */
+/*   Updated: 2024/07/08 10:00:57 by jhouyet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,51 +14,22 @@
 
 #include <iostream>
 
-int	main()
+int main( void )
 {
-	int a = 1;
-	int b = 20;
+	int a = 2;
+	int b = 3;
+
+	::swap( a, b );
+	std::cout << "a = " << a << ", b = " << b << std::endl;
+	std::cout << "min( a, b ) = " << ::min( a, b ) << std::endl;
+	std::cout << "max( a, b ) = " << ::max( a, b ) << std::endl;
 	
-	std::cout << "Values : a = " << a << ", b = " << b << std::endl;
+	std::string c = "chaine1";
+	std::string d = "chaine2";
 
-	std::cout << std::endl;
-    
-	swap(a, b);
-	
-	std::cout << "Swapping : a = " << a << ", b = " << b << std::endl;
-
-	std::cout << std::endl;
-    
-	std::cout << "Min: " << min(a, b) << std::endl;
-
-	std::cout << std::endl;
-	
-	std::cout << "Max: " << max(a, b) << std::endl;
-
-	std::cout << std::endl;
-	
-	std::cout << "----------------------------" << std::endl;
-
-	std::cout << std::endl;
-
-	double x = 1.1;
-	double y = 2.2;
-	
-	std::cout << "Values : x = " << x << ", y = " << y << std::endl;
-
-	std::cout << std::endl;
-    
-	swap(x, y);
-	
-	std::cout << "Swapping : x = " << x << ", y = " << y << std::endl;
-
-	std::cout << std::endl;
-    
-	std::cout << "Min: " << min(x, y) << std::endl;
-
-	std::cout << std::endl;
-	
-	std::cout << "Max: " << max(x, y) << std::endl;
-
+	::swap(c, d);
+	std::cout << "c = " << c << ", d = " << d << std::endl;
+	std::cout << "min( c, d ) = " << ::min( c, d ) << std::endl;
+	std::cout << "max( c, d ) = " << ::max( c, d ) << std::endl;
 	return 0;
 }
