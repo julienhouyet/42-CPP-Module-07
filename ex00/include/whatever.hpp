@@ -6,12 +6,12 @@
 /*   By: jhouyet <jhouyet@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/30 13:42:54 by jhouyet           #+#    #+#             */
-/*   Updated: 2024/07/08 09:50:41 by jhouyet          ###   ########.fr       */
+/*   Updated: 2024/07/09 11:36:43 by jhouyet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FUNCTIONS_HPP
-#define FUNCTIONS_HPP
+#ifndef WHATEVER_HPP
+#define WHATEVER_HPP
 
 template <typename T>
 void swap(T& a, T& b)
