@@ -6,7 +6,7 @@
 #    By: jhouyet <jhouyet@student.s19.be>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/24 11:24:58 by jhouyet           #+#    #+#              #
-#    Updated: 2024/07/09 12:52:37 by jhouyet          ###   ########.fr        #
+#    Updated: 2024/07/09 12:59:31 by jhouyet          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,8 +16,7 @@ SRC_DIR 	= src
 INC_DIR		= include
 OBJ_DIR 	= obj
 
-SRC 		= 	$(SRC_DIR)/Array.cpp \
-				$(SRC_DIR)/main.cpp
+SRC 		= 	$(SRC_DIR)/main.cpp
 				
 OBJ			= $(SRC:$(SRC_DIR)/%.cpp=$(OBJ_DIR)/%.o)
 CC 			= c++
