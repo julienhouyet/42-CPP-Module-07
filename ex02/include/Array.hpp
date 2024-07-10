@@ -6,7 +6,7 @@
 /*   By: jhouyet <jhouyet@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/09 12:52:02 by jhouyet           #+#    #+#             */
-/*   Updated: 2024/07/09 18:06:36 by jhouyet          ###   ########.fr       */
+/*   Updated: 2024/07/10 07:46:05 by jhouyet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,9 @@ class Array
 		~Array( void );
 
 		unsigned int size() const;
+
+		T& operator[](unsigned int index);
+		const T& operator[](unsigned int index) const;
 		
 	private:
 		T* 				_data;

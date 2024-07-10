@@ -6,11 +6,10 @@
 /*   By: jhouyet <jhouyet@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/09 16:55:32 by jhouyet           #+#    #+#             */
-/*   Updated: 2024/07/09 18:06:32 by jhouyet          ###   ########.fr       */
+/*   Updated: 2024/07/10 07:46:03 by jhouyet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <cstddef>
 #include <stdexcept>
 
 // ************************************************************************** //
@@ -32,7 +31,7 @@ Array<T>::Array( unsigned int nbr) : _data(new T[nbr]), _size(nbr)
 }
 
 template <typename T>
-Array<T>::Array( const Array& copy ) 
+Array<T>::Array( const Array& copy ) : _data(new T[copy._size]), _size(copy._size)
 {
     for (unsigned int i = 0; i < this->_size; ++i) {
 		this->_data[i] = copy._data[i];
@@ -57,4 +56,34 @@ template <typename T>
 Array<T>::~Array( void )
 {
 	delete[] this->_data;
+}
+
+// ************************************************************************** //
+//                          Public Member Functions                           //
+// ************************************************************************** //
+
+template <typename T>
+T& Array<T>::operator[](unsigned int index)
+{
+	if (index >= _size || index < 0)
+	{
+		throw std::out_of_range("Index out of range");
+	}
+	return _data[index];
+}
+
+template <typename T>
+const T& Array<T>::operator[](unsigned int index) const
+{
+	if (index >= _size || index < 0)
+	{
+		throw std::out_of_range("Index out of range");
+	}
+	return _data[index];
+}
+
+template <typename T>
+unsigned int Array<T>::size() const
+{
+	return _size;
 }

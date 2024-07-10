@@ -6,7 +6,7 @@
 /*   By: jhouyet <jhouyet@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/09 12:52:18 by jhouyet           #+#    #+#             */
-/*   Updated: 2024/07/09 18:05:38 by jhouyet          ###   ########.fr       */
+/*   Updated: 2024/07/10 07:47:21 by jhouyet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ int main(int, char**)
         mirror[i] = value;
     }
     //SCOPE
-	/* 
     {
         Array<int> tmp = numbers;
         Array<int> test(tmp);
@@ -63,7 +62,14 @@ int main(int, char**)
     {
         numbers[i] = rand();
     }
+
+	std::cout << "10 first values of array:" << std::endl;
+	for (int i = 0; i < 10; i++)
+	{
+		std::cout << numbers[i] << " ";
+	}
+	std::cout << std::endl;
+
     delete [] mirror;
-	*/
     return 0;
 }
